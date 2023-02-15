@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/Register.css">
+    <script src="js/vue.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+    <script src="js/jQuerty3.3.1.min.js"></script>
+</head>
+<body>
+
+<div class="form-la" id="res">
+    <form class="form-container" action="" method="post">
+        <h2>EC后台管理平台</h2>
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text" class="form-control" @blur="blurUserName" v-model="user.userName" placeholder="请输入账号"><br/>
+            <span id="User" class="warn" style="display:none">用户名不符合规范</span>
+            <span id="User1" class="warn" style="display: none">用户名重复</span>
+            <br/>
+
+        </div>
+        <div class="form-group">
+            <label>用户密码</label>
+            <input type="password" class="form-control" @blur="blurPassword" v-model="user.password" placeholder="请输入密码"><br/>
+            <span id="pass" class="warn" style="display: none">密码不符合规范</span>
+            <br/>
+        </div>
+
+        <div class="form-group">
+            <label>确认密码</label>
+            <input type="password" class="form-control" @blur="blurPassword" v-model="comparison.password" placeholder="请再次输入密码"><br/>
+            <span id="pass1" class="warn" style="display: none">两次密码不一致</span>
+            <br/>
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn" id="bt1" @click="onsubmitFrom" value="注册">
+
+        </div>
+        <div class="form-group">
+            <div class="form-ad">
+                <input  type="button" @click="clicko" class="form-sw" value="已有账号？登录">
+            </div>
+        </div>
+    </form>
+
+    <!-- 错误弹窗提示 -->
+    <div class="box_error_prompt">
+        <div class="error_prompt_img">
+            <img src="imgs/index_img/jinggao.png" >
+        </div>
+        <div class="box_text_prompt">
+            <span>注册失败</span>
+        </div>
+    </div>
+
+    <!-- 正确弹窗提示 -->
+    <div class="box_correct">
+        <div class="error_prompt_img">
+            <img src="imgs/index_img/true.png" >
+        </div>
+        <div class="box_text_prompt">
+            <span>注册成功</span>
+        </div>
+    </div>
+</div>
+<script src="js/Register.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body{
+    background-image: url("../imgs/LoginBg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:100%;
+    background-color: pink;
+}
+label{
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 1em;
+}
+.form-la{
+    width: 320px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.5);
+    margin: 240px auto;
+    padding: 50px 35px;
+    text-align: center;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+.form-group{
+    width: 320px;
+    height: 70px;
+}
+.form-control{
+    width: 285px;
+    height: 28px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+    font-size: 14px;
+    padding: 0.5em;
+}
+.form-control:focus{
+    border: 2px solid grey;
+}
+.btn{
+    margin-top: 20px;
+    background-color: #89c1ec;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}
+.btn:hover{
+    background-color: #4b7dad;
+}
+
+.form-a{
+    color: blue;
+    font-size: 14px;
+    background-color: rgba(255,255,255,0);
+    border:none;
+}
+.form-a:hover{
+    color: cornflowerblue;
+    border:none;
+}
+.form-ad{
+    float: left;
+    padding-left: 1em;
+}
+.form-ad2{
+    float: right;
+    padding-right: 1em;
+}
+
+
+
+/*弹窗*/
+/* 弹窗 */
+.box_error_prompt,.box_correct{
+    width: 280px;
+    height: 100px;
+    border-radius: 15px;
+    position: absolute;
+    right: 20px;top: 20px;
+    display: none;
+    background-color: rgba(255,255,255,0.6);
+}
+.error_prompt_img{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    float: left;
+}
+.error_prompt_img img{
+    margin-top: 15px;
+}
+.box_text_prompt{
+    width: 178px;
+    height: 100px;
+    float: right;
+    font-weight: 800;
+    line-height: 100px;
+    text-align: center;
+    border-left: 2px dashed rgba(255,255,255,0.4);
+}

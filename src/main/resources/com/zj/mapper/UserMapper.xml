@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zj.mapper.UserMapper">
+
+    <resultMap id="userResultMap" type="User">
+        <result property="userName" column="user_name" />
+    </resultMap>
+
+    <!--    登录：根据用户名和密码查询数据-->
+    <select id="selectAllByUserNameAndPasswordUser" resultMap="userResultMap">
+        select * from user where user_name = #{userName} and password = #{password};
+    </select>
+
+<!--   注册：根据用户名查询数据 -->
+    <select id="selectAllByUserNameUser" resultMap="userResultMap">
+        select * from user where user_name = #{userName};
+    </select>
+
+<!--    注册：根据用户信息添加所有-->
+    <insert id="addAll">
+        insert into user values (null,#{userName},#{password});
+    </insert>
+
+</mapper>
